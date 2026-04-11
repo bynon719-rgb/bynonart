@@ -363,6 +363,27 @@ input:checked+.slider:before{transform:translateX(15px);}
 </div>
 
 <script>
+// ====== LOCAL STORAGE 核心 ======
+const STORAGE_KEY = "bynon_commissions_v1";
+
+function loadData() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+  } catch {
+    return [];
+  }
+}
+
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(commissions));
+}
+
+// 初始化資料
+let commissions = loadData();
+  function autoSave() {
+  saveData();
+  console.log("已自動儲存");
+  }
 // ══ SUPABASE CONFIG ══
 const SB_URL = 'https://xsjarqmrwcpthkvamgbu.supabase.co';
 const SB_KEY = 'sb_publishable_eYrR1G1vAEezXNiaoYkWiA_1qLxSa1p';
