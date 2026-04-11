@@ -381,7 +381,7 @@ let counter = 0; // local counter fallback
 function mkDefaultSettings(){
   const now=new Date(), cm=now.getMonth()+1;
   const slots={};
-  for(let m=1;m<=12;m++) slots[m]={open:m===cm||m===cm+1,limit:2};
+  for(let m=5;m<=12;m++) slots[m]={open:m===cm||m===cm+1,limit:2};
   return{
     announcement:'●開放投單，有特殊需求歡迎私訊討論 🙏六月前會打折●每個審稿點可改兩次但依實際繪製順序為主，比如先上色再線稿那就會一起檢查所以狀態會跳●聯絡連結請填平台加帳號●沒有參考連結可以在說明裡面寫「私訊提供」',
     priceNote:'全插圖底價單人 $2,000 NTD 起，構圖元素另計',
